@@ -7,7 +7,7 @@ import time
 # NOTE: functions are used in reverse order, because functions must be defined before they are called and the functions call each other.
 # NOTE 2: score basically represent the stats and ID of each attempt, that is why it's used as a central list.
 
-reset= True  #when False, progress is saved in a .txt when false, progress is reset. set to false when changing scenario_amount or old values will still be used
+reset= True  #when False, progress is saved in a .txt when false, progress is reset. set to True when changing scenario_amount or old values will still be used
 insights = False # if true, prints extra stats and lists
 scenario_amount = 10 # amplifies amount of scenarios
 repeat = "inf" # number off attempts that should be executed, if int: loop while be executed {repeat} times. setting it to "inf" will make the script repeat infinitely
