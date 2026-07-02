@@ -18,7 +18,11 @@ cooldown = 0.25 # time (in seconds) inbetween each attempt
 formatcharacter = "-" # customizes the character used to format reports
 formatlength = 25 # customizes length of reports
 timestamp = True # displays each attempt's timestamp, duh
-
+#
+#                                                                    +-------+
+#                                                                    | CODE: |
+#                                                                    +-------+
+#
 score=[] # basic strucure: (0,"green/green", 0, 0),(1,"green/red", 0, 0),(2,"red/green", 0, 0), (3,"red/red", 0,0)
 scenarios=[]
 actions=[]
