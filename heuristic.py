@@ -2,7 +2,7 @@ import random
 import math
 import ast
 import time
-
+from datetime import datetime as dt
 # this script learns the correct actions to take when it faces corresponding scenarios, each scenario has its own action. changing scenario amount will thus also change action amount
 # NOTE: functions are used in reverse order, because functions must be defined before they are called and the functions call each other.
 # NOTE 2: score basically represent the stats and ID of each attempt, that is why it's used as a central list.
@@ -51,12 +51,14 @@ def execute(index,state):
     scenario = state.split("/")[1]
     templist = list(score[index])
     templist[2] +=1
+    now= dt.now()
+    currentTime = now.strftime("%H: %M: %S")
     messageFormater = lambda x: (x - (len(action)+len(scenario))) * formatcharacter
     if action[6:] ==scenario[8:]:
-        print(f" chose {action} if {scenario} {messageFormater(formatlength)} CORRECT")
+        print(f"{currentTime}: chose {action} if {scenario} {messageFormater(formatlength)} CORRECT")
         templist[3] +=1
     else:
-        print(f" chose {action} if {scenario} {messageFormater(formatlength - 1)} INCORRECT")
+        print(f"{currentTime}: chose {action} if {scenario} {messageFormater(formatlength - 1)} INCORRECT")
     score[index] = tuple(templist)
     save()
 
