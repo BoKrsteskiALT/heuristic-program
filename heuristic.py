@@ -52,7 +52,7 @@ def execute(index,state):
     templist = list(score[index])
     templist[2] +=1
     now= dt.now()
-    currentTime = now.strftime("%H: %M: %S")
+    currentTime = now.strftime("%H:%M:%S")
     messageFormater = lambda x: (x - (len(action)+len(scenario))) * formatcharacter
     if action[6:] ==scenario[8:]:
         print(f"{currentTime}: chose {action} if {scenario} {messageFormater(formatlength)} CORRECT")
