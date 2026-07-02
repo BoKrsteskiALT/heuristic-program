@@ -34,7 +34,8 @@ for i in range(scenario_amount):
 for i in range(len(actions)):
     for u in range(len(scenarios)):
         score.append((len(score), f"{actions[i]}/{scenarios[u]}",0,0))
-      
+if insights:
+    print(f"score list length: {len(score)}")
 #checking if reset is set to True, if so, contents of the txt are wiped and replaced with previously recompiled score contents
 if reset:
     with open("score.txt","w",encoding="utf-8") as file:
