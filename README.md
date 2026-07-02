@@ -7,4 +7,4 @@ yes it might seem slow at times but it actually isnt. if you set scenario_amount
 
 stats:
 
-time to learn 50 scenarios (100% successrate) = ~10 minutes
+time to learn 50 scenarios (100% successrate) = ~10 minutes   (3,04140932 × 10⁶⁴ combinations)
