@@ -33,7 +33,7 @@ if reset:
         file.write(str(score))
         print("score reset")
 
-# changes current selected scenario to a random one from score. .split("/") is used because action and scenario are formated in a single string ("action/scenario")
+# changes current selected scenario to a random one from score; .split("/") is used because action and scenario are formated in a single string ("action/scenario")
 def randomScenario():
     dec = random.randint(0,len(score)-1)
     return score[dec][1].split("/")[1]
@@ -60,7 +60,7 @@ def execute(index,state):
     score[index] = tuple(templist)
     save()
 
-# decides which action is the best to take in the current scenario. this is mainly being calculated with successes / tries * math.log(tries). successes / tries calculates the success rate and log(tries) prevents cases like tries=1,successes=1,successrate=1.0 by reducing the values of rates with few attempts and increases rates for those who have many attempts
+# decides which action is the best to take in the current scenario. this is mainly being calculated with successes / tries * math.log(tries) ; successes / tries calculates the success rate and log(tries) prevents cases like tries=1,successes=1,successrate=1.0 by reducing the values of rates with few attempts and increases rates for those who have many attempts
 def decideAction():
     currentScenario=randomScenario()
     comparisonList=[]
