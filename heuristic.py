@@ -3,6 +3,9 @@ import math
 import ast
 import time
 from datetime import datetime as dt
+#                                                                    +---------+
+#                                                                    | BASICS: |
+#                                                                    +---------+
 # this script learns the correct actions to take when it faces corresponding scenarios, each scenario has its own action. changing scenario amount will thus also change action amount
 # NOTE: functions are used in reverse order, because functions must be defined before they are called and the functions call each other.
 # NOTE 2: score basically represent the stats and ID of each action/scenario combination, that is why it's used as a central list.
