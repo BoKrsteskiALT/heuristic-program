@@ -12,6 +12,8 @@ insights = False # if true, prints extra stats and lists
 scenario_amount = 10 # amplifies amount of scenarios
 repeat = "inf" # number off attempts that should be executed, if int: loop while be executed {repeat} times. setting it to "inf" will make the script repeat infinitely
 cooldown = 0.25 # time (in seconds) inbetween each attempt
+formatcharacter = "-" # customizes the character used to format reports
+formatlength = 25 # customizes length of reports
 
 score=[] # basic strucure: (0,"green/green", 0, 0),(1,"green/red", 0, 0),(2,"red/green", 0, 0), (3,"red/red", 0,0)
 scenarios=[]
@@ -49,12 +51,12 @@ def execute(index,state):
     scenario = state.split("/")[1]
     templist = list(score[index])
     templist[2] +=1
-    messageFormater = lambda x: (x - (len(action)+len(scenario))) * "-"
+    messageFormater = lambda x: (x - (len(action)+len(scenario))) * formatcharacter
     if action[6:] ==scenario[8:]:
-        print(f" chose {action} if {scenario} {messageFormater(25)} CORRECT")
+        print(f" chose {action} if {scenario} {messageFormater(formatlength)} CORRECT")
         templist[3] +=1
     else:
-        print(f" chose {action} if {scenario} {messageFormater(24)} INCORRECT")
+        print(f" chose {action} if {scenario} {messageFormater(formatlength - 1)} INCORRECT")
     score[index] = tuple(templist)
     save()
 
