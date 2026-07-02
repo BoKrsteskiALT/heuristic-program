@@ -14,6 +14,7 @@ repeat = "inf" # number off attempts that should be executed, if int: loop while
 cooldown = 0.25 # time (in seconds) inbetween each attempt
 formatcharacter = "-" # customizes the character used to format reports
 formatlength = 25 # customizes length of reports
+timestamp = True # displays each attempt's timestamp, duh
 
 score=[] # basic strucure: (0,"green/green", 0, 0),(1,"green/red", 0, 0),(2,"red/green", 0, 0), (3,"red/red", 0,0)
 scenarios=[]
@@ -55,10 +56,10 @@ def execute(index,state):
     currentTime = now.strftime("%H:%M:%S")
     messageFormater = lambda x: (x - (len(action)+len(scenario))) * formatcharacter
     if action[6:] ==scenario[8:]:
-        print(f"{currentTime} chose {action} if {scenario} {messageFormater(formatlength)} CORRECT")
+        print(f"{currentTime if timestamp else ""} chose {action} if {scenario} {messageFormater(formatlength)} CORRECT")
         templist[3] +=1
     else:
-        print(f"{currentTime} chose {action} if {scenario} {messageFormater(formatlength - 1)} INCORRECT")
+        print(f"{currentTime if currentTime else ""} chose {action} if {scenario} {messageFormater(formatlength - 1)} INCORRECT")
     score[index] = tuple(templist)
     save()
 
