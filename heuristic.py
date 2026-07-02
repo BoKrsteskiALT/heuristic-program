@@ -55,10 +55,10 @@ def execute(index,state):
     currentTime = now.strftime("%H:%M:%S")
     messageFormater = lambda x: (x - (len(action)+len(scenario))) * formatcharacter
     if action[6:] ==scenario[8:]:
-        print(f"{currentTime}: chose {action} if {scenario} {messageFormater(formatlength)} CORRECT")
+        print(f"{currentTime} chose {action} if {scenario} {messageFormater(formatlength)} CORRECT")
         templist[3] +=1
     else:
-        print(f"{currentTime}: chose {action} if {scenario} {messageFormater(formatlength - 1)} INCORRECT")
+        print(f"{currentTime} chose {action} if {scenario} {messageFormater(formatlength - 1)} INCORRECT")
     score[index] = tuple(templist)
     save()
 
