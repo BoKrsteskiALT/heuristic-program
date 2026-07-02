@@ -60,7 +60,7 @@ def execute(index,state):
     score[index] = tuple(templist)
     save()
 
-# decides which action is the best to take in the current scenario. this is mainly being calculated with successes / tries * math.log(tries) ; successes / tries calculates the success rate and log(tries) prevents cases like tries=1,successes=1,successrate=1.0 by reducing the values of rates with few attempts and increases rates for those who have many attempts
+# decides which action is the best to take in the current scenario. this is mainly being calculated with successes / tries * math.log(tries) ; successes / tries calculates the success rate and log(tries) prevents cases like tries=1,successes=1,successrate=1.0 by reducing the values of rates with few attempts and increasing rates for those who have many attempts and are still successful
 def decideAction():
     currentScenario=randomScenario()
     comparisonList=[]
