@@ -116,7 +116,7 @@ if repeat == "inf":
   while True:
       importScore()
       time.sleep(cooldown)
-elif isuinstance(repeat, int):
+elif isinstance(repeat, int):
   for i in range(repeat):
     importScore()
     time.sleep(cooldown)
