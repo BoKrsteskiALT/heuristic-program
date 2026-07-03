@@ -6,5 +6,7 @@ yes, it might seem slow at times but it actually isnt. if you set scenario_amoun
 
 
 stats:
+
 time to learn 10 scenarios (100% successrate, cooldown set to 0.1) = < 1 minutes   (3.628.800 combinations)
+
 time to learn 50 scenarios (100% successrate, cooldown set to 0.1) = ~10 minutes   (3,04140932 × 10⁶⁴ combinations)
