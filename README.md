@@ -9,4 +9,6 @@ stats:
 
 time to learn 10 scenarios (100% successrate, cooldown set to 0.1) = < 1 minute   (3.628.800 combinations)
 
+time to learn 25 scenarios (100% successrate, cooldown set to 0.1) = ~2 minutes (1,551121 × 10²⁵ combinations)
+
 time to learn 50 scenarios (100% successrate, cooldown set to 0.1) = ~10 minutes   (3,04140932 × 10⁶⁴ combinations)
