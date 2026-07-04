@@ -13,7 +13,7 @@ from datetime import datetime as dt
 reset= True  # if False, progress is saved in a .txt ; if True, progress is reset. set to True when changing scenario_amount or old values will still be used
 insights = False # if true, prints extra stats and lists
 scenario_amount = 10 # defines amount of scenarios
-repeat = "inf" # number of attempts that should be executed, if int: loop while be executed {repeat} times. setting it to "inf" will make the script repeat infinitely
+repeat = "inf" # number of attempts that should be executed, if int: loop will be executed {repeat} times. setting it to "inf" will make the script repeat infinitely
 cooldown = 0.25 # time (in seconds) inbetween each attempt
 formatcharacter = "-" # customizes the character used to format reports
 formatlength = 25 # customizes length of reports
