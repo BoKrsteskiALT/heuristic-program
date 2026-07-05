@@ -9,7 +9,7 @@ from datetime import datetime as dt
 # this script learns the correct actions to take when it faces corresponding scenarios, each scenario has its own action. changing scenario amount will thus also change action amount
 # NOTE: functions are used in reverse order, because functions must be defined before they are called and the functions call each other.
 # NOTE 2: score represents the stats and ID of each action/scenario combination, that is why it's used as a central list.
-# NOTE 3: reset must be true on initial execution. don't change it the first time!
+# NOTE 3: reset must be true on initial execution if you want to execute with a custom amount of scenarios. Default is 2.
 reset= True  # if False, progress is saved in a .txt ; if True, progress is reset. set to True when changing scenario_amount or old values will still be used
 insights = False # if true, prints extra stats and lists
 scenario_amount = 10 # defines amount of scenarios
