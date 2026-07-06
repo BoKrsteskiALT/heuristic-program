@@ -92,7 +92,7 @@ def decideAction():
             otherRates.append((index,state,tries,successes))
         else:
             badRates.append((index,state,tries,successes))
-    # 3 classes for entries/actions; highestEntry: the one value that prevails, will be used ; otherRates: rates that do not prevail but still are sufficient, vented to when no highestEntry was found; badRates: Rates that are excluded because they are proven unworthy, if there are no otherRates, vents to badRates
+    # 3 classes for entries/actions; highestEntry: the one value that prevails, will always be used if it exists ; otherRates: rates that do not prevail but still are sufficient, vented to when no highestEntry was found; badRates: Rates that are excluded because they are proven unworthy, if there are no otherRates, vents to badRates
     if highestEntry > 0.0:
         execute(highestEntryIndex,highestEntryState)
     elif len(otherRates) > 0:
